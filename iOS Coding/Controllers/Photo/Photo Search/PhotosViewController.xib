@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PhotosViewController" customModule="iOS_Coding" customModuleProvider="target">
+            <connections>
+                <outlet property="actionLabel" destination="C9S-un-dDk" id="joF-bj-IFC"/>
+                <outlet property="loadingIndicator" destination="H0H-Bh-qSk" id="a1a-PI-RAQ"/>
+                <outlet property="tableView" destination="E9p-uc-iay" id="ZTY-nF-kmg"/>
+                <outlet property="view" destination="iN0-l3-epB" id="18f-1R-dYb"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="E9p-uc-iay">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="KlI-PX-V7Q"/>
+                        <outlet property="delegate" destination="-1" id="yJD-8m-6Nh"/>
+                    </connections>
+                </tableView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C9S-un-dDk">
+                    <rect key="frame" x="20" y="443" width="374" height="20.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" name="actionLabel"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="H0H-Bh-qSk">
+                    <rect key="frame" x="197" y="443" width="20" height="20"/>
+                    <color key="color" name="activityIndicator"/>
+                </activityIndicatorView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" name="viewBackground"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="C9S-un-dDk" secondAttribute="trailing" constant="20" id="5z8-8X-ilM"/>
+                <constraint firstItem="E9p-uc-iay" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="I6E-Bg-WBv"/>
+                <constraint firstItem="E9p-uc-iay" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="hAg-Wf-6ol"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="E9p-uc-iay" secondAttribute="trailing" id="jYg-1K-7Ta"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="E9p-uc-iay" secondAttribute="bottom" id="m9U-Ro-Rq3"/>
+                <constraint firstItem="H0H-Bh-qSk" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="qkL-7G-1Gz"/>
+                <constraint firstItem="H0H-Bh-qSk" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="quo-fk-gdG"/>
+                <constraint firstItem="C9S-un-dDk" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="uBk-pf-45j"/>
+                <constraint firstItem="C9S-un-dDk" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="uRx-pZ-gKd"/>
+            </constraints>
+            <point key="canvasLocation" x="50.724637681159422" y="35.491071428571423"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="actionLabel">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </namedColor>
+        <namedColor name="activityIndicator">
+            <color red="0.55699998140335083" green="0.55699998140335083" blue="0.57599997520446777" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="viewBackground">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
